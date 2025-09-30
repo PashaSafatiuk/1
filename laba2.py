@@ -1,4 +1,4 @@
-# Створюємо список із 10 int та 10 str
+
 list = [5, 2, 9, 8, 1, 4, 6, 3, 7, 10,
            "banana", "apple", "cherry", "grape", "kiwi",
            "pear", "orange", "plum", "melon", "lemon"]
@@ -12,3 +12,4 @@ up = [x.upper() for x in strings]
 print("Головний відсортований список:", ints + strings)
 print("Список чисел, кратних 2:", x2)
 print("Список строк у верхньому регістрі:", up)
+
