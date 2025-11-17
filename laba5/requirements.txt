@@ -1,0 +1,10 @@
+requests
+numpy
+pandas
+matplotlib
+Pillow
+faker
+beautifulsoup4
+lxml
+sympy
+seaborn
