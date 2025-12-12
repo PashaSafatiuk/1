@@ -1,59 +1,44 @@
-
+import math
+import random
+import datetime
+import os
+import sys
+import json
 import requests
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from PIL import Image
-from faker import Faker
-from bs4 import BeautifulSoup
-import lxml
-import sympy as sp
-import seaborn as sns
 
+# 1. math
+try:
+    num = 16
+    print(f"Квадратний корінь з {num}: {math.sqrt(num)}")
+except Exception as e:
+    print("Помилка у math:", e)
 
-print("Лабораторна робота 5: тестування бібліотек\n")
+# 2. random
+try:
+    print("Випадкове число від 1 до 10:", random.randint(1, 10))
+except Exception as e:
+    print("Помилка у random:", e)
 
+# 3. datetime
+try:
+    now = datetime.datetime.now()
+    print("Поточна дата і час:", now.strftime("%Y-%m-%d %H:%M:%S"))
+except Exception as e:
+    print("Помилка у datetime:", e)
 
-# ------------------ TRY #1: requests ------------------
+# 4. requests
 try:
     response = requests.get("https://api.github.com")
-    print("Requests OK:", response.status_code)
+    print("Статус код запиту:", response.status_code)
 except Exception as e:
-    print("Requests ERROR:", e)
+    print("Помилка у requests:", e)
 
-
-# ------------------ TRY #2: numpy ------------------
+# 5. numpy
 try:
-    arr = np.array([1, 2, 3])
-    print("NumPy OK:", arr * 10)
+    arr = np.array([1, 2, 3, 4, 5])
+    print("Середнє значення:", np.mean(arr))
 except Exception as e:
-    print("NumPy ERROR:", e)
-
-
-# ------------------ TRY #3: pandas ------------------
-try:
-    df = pd.DataFrame({
-        "Name": ["Pasha", "Oleh", "Ira"],
-        "Age": [18, 22, 19]
-    })
-    print("Pandas OK:\n", df)
-except Exception as e:
-    print("Pandas ERROR:", e)
-
-
-# ------------------ TRY #4: matplotlib ------------------
-try:
-    plt.plot([1, 2, 3], [4, 1, 7])
-    plt.title("Test Plot")
-    plt.close()   # щоб не відкривало вікно
-    print("Matplotlib OK")
-except Exception as e:
-    print("Matplotlib ERROR:", e)
-
-
-# ------------------ TRY #5: Pillow ------------------
-try:
-    img = Image.new("RGB", (50, 50), color="blue")
-    print("Pillow OK: image size =", img.size)
-except Exception as e:
-    print("Pillow ERROR:", e)
+    print("Помилка у numpy:", e)
